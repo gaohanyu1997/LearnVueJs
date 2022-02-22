@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>vue列表展示</title>
+</head>
+<body>
+<div id="app">
+    <ul>
+        <li v-for="item in inters">{{item}}</li>
+    </ul>
+</div>
+
+<script src="../js/vue.js"></script>
+<script>
+    const app = new Vue({
+        el:'#app',
+        data:{
+            message:'列表展示',
+            inters:['科比','詹姆斯','乔丹']
+        }
+    })
+</script>
+</body>
+</html>
