@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+</head>
+<body>
+<div id = "app">
+  <label v-for="item in originHobbies" v-for="item">
+    <input type="checkbox" :value="item" id="item" v-model="hobbies">{{item}}
+  </label>
+  <h2>你选择的水果是：{{hobbies}}</h2>
+</div>
+
+<script src="../js/vue.js"></script>
+<script>
+  const app = new Vue({
+    el: '#app',
+    data:{
+      hobbies:[], //多选框
+      originHobbies:['篮球','足球','网球','台球','羽毛球']
+    }
+  })
+</script>
+</body>
+</html>
